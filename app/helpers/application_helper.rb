@@ -9,4 +9,13 @@ module ApplicationHelper
       "#{base_title} | #{page_title}"
     end
   end
+
+  def creator_path
+    creator = User.find_by_email("mickle00@gmail.com")
+    if creator
+      user_path(creator)
+    else
+      root_path
+    end
+  end
 end
