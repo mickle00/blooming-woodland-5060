@@ -28,11 +28,11 @@
       </tr>
       <tr>
         <td>Created At: </td>
-        <td><%= @user.created_at %></td>
+        <td><%= l @user.created_at.localtime %></td>
       </tr>
       <tr>
         <td>Last Updated:</td>
-        <td><%= @user.updated_at %></td>
+        <td><%= l @user.updated_at.localtime %></td>
       </tr>
     </table>
     </section>
