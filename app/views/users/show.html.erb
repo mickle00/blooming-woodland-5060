@@ -20,12 +20,22 @@
   <bside class ="span8"
   <section>
     <table class="table table-striped">
-      <% for field in ['id', 'email', 'created_at', 'updated_at'] %>
-        <tr>
-          <td><%= field.humanize %>:</td>
-          <td><%= @user.attributes[field].to_s %></td>
+      <tr>
+        <td>Id: </td>
+        <td><%= @user.id %></td>
       </tr>
-      <% end %>
+      <tr>
+        <td>Email:</td>
+        <td><a href="mailto: <%= @user.email %>"><%= @user.email %></a></td>
+      </tr>
+      <tr>
+        <td>Created At: </td>
+        <td><%= @user.created_at %></td>
+      </tr>
+      <tr>
+        <td>Last Updated:</td>
+        <td><%= @user.updated_at %></td>
+      </tr>
     </table>
     </section>
   </bside>
