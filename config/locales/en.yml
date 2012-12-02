@@ -5,6 +5,7 @@ en:
   hello: "Hello world"
 
   time:
+    #heroku config:add TZ=US/Pacific
     #am: AM
     #pm: PM
     formats:
