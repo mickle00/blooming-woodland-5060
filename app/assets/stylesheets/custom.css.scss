@@ -188,3 +188,13 @@ input {
     }
   }
 }
+
+/* user page */
+#username {
+  white-space:nowrap;
+  display: inline-block;
+}
+#admin {
+  color: red;
+  white-space: nowrap;
+}

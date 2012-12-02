@@ -1,11 +1,32 @@
 <% provide(:title, @user.name) %>
 <div class="row">
-  <aside class="span4">
+  <aside class="span12">
     <section>
-      <h1>
-        <%= gravatar_for @user, :size => 200 %>
+      <h1> 
         <%= @user.name %>
+        <% if @user.admin? %>
+          <span id='admin'>[Admin]</span>
+        <% end %>
       </h1>
     </section>
   </aside>
+</div>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <%= gravatar_for @user, :size => 200 %>
+    </section>
+  </aside>
+  <bside class ="span8"
+  <section>
+    <table class="table table-striped">
+      <% for field in ['id', 'email', 'created_at', 'updated_at'] %>
+        <tr>
+          <td><%= field.humanize %>:</td>
+          <td><%= @user.attributes[field].to_s %></td>
+      </tr>
+      <% end %>
+    </table>
+    </section>
+  </bside>
 </div>
