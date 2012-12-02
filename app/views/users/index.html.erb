@@ -3,8 +3,14 @@
 
 <%= will_paginate %>
 
-<ul class="users">
+<table class="table table-striped">
+  <th>Gravatar</th>
+  <th>Name</th>
+  <th>Email</th>
+  <% if current_user.admin? %>
+    <th>Action</th>
+  <% end %>
   <%= render @users %>
-</ul>
+</table>
 
 <%= will_paginate %>
